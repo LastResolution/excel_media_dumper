@@ -6,6 +6,10 @@ from file_util import exists_file, initialize, is_xlsx
 if __name__ == "__main__":
     path_list: list[str] = sys.argv[1:]
 
+    if not len(path_list):
+        print("Arguments is None.")
+        print("Please input dump .xlsx file path.")
+
     initialize()
 
     for path in path_list:
