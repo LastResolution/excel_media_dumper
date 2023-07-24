@@ -1,6 +1,6 @@
 import sys
 
-from file_util import exists_file, initialize, is_xlsx
+from file_util import exists_file, get_media, initialize, is_xlsx
 
 
 if __name__ == "__main__":
@@ -20,3 +20,6 @@ if __name__ == "__main__":
         # .xlsx judge
         if not is_xlsx(path):
             continue
+
+        # run main function
+        get_media(path)
