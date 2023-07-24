@@ -1,10 +1,12 @@
 import sys
 
-from file_util import exists_file, is_xlsx
+from file_util import exists_file, initialize, is_xlsx
 
 
 if __name__ == "__main__":
     path_list: list[str] = sys.argv[1:]
+
+    initialize()
 
     for path in path_list:
         # file exists judge

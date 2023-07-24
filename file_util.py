@@ -1,6 +1,11 @@
 import os
 
 
+def initialize() -> None:
+    if not os.path.exists("resources"):
+        os.makedirs("./resources")
+
+
 def exists_file(path: str) -> bool:
     if not os.path.exists(path):
         print("File not found.")
