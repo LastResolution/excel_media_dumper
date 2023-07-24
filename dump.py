@@ -1,5 +1,6 @@
-import os
 import sys
+
+from file_util import exists_file, is_xlsx
 
 
 if __name__ == "__main__":
@@ -7,15 +8,9 @@ if __name__ == "__main__":
 
     for path in path_list:
         # file exists judge
-        if not os.path.exists(path):
-            print("File not found.")
-            print(f" > {path}")
-            print("\n")
+        if not exists_file(path):
             continue
 
         # .xlsx judge
-        if not path.endswith(".xlsx"):
-            print("Only xlsx files are supported.")
-            print(f" > {path}")
-            print("\n")
+        if not is_xlsx(path):
             continue
